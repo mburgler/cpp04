@@ -6,7 +6,7 @@
 /*   By: mburgler <mburgler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 17:11:07 by mburgler          #+#    #+#             */
-/*   Updated: 2024/04/03 16:06:57 by mburgler         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:21:03 by mburgler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,26 +30,22 @@ int	main() {
 	wrongAnimal.makeSound();
 	wrongCat.makeSound();
 
-	try {
-		std::cout << "\nBASE CLASS POINTERS AND REFERENCES TO THE DERIVED CLASS\n" << std::endl;
-		const Animal* meta = new Animal();
-		const WrongAnimal* w = new WrongCat();
-		const Animal* j = new Dog();
-		const Animal* i = new Cat();
-		std::cout << j->getType() << " " << std::endl;
-		std::cout << i->getType() << " " << std::endl;
-		i->makeSound(); //will output the cat sound!
-		j->makeSound();
-		meta->makeSound();
-		w->makeSound();
+	std::cout << "\nBASE CLASS POINTERS AND REFERENCES TO THE DERIVED CLASS\n" << std::endl;
+	const Animal* meta = new Animal();
+	const WrongAnimal* w = new WrongCat();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); //will output the cat sound!
+	j->makeSound();
+	meta->makeSound();
+	w->makeSound();
 
-		delete meta;
-		delete w;
-		delete j;
-		delete i;
-	}
-	catch (std::exception &e){
-		std::cout << "#ERROR#\n" << e.what();
-	}
+	delete meta;
+	delete w;
+	delete j;
+	delete i;
+
 	return 0;
 }
