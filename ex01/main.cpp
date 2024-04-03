@@ -6,7 +6,7 @@
 /*   By: mburgler <mburgler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 17:11:07 by mburgler          #+#    #+#             */
-/*   Updated: 2024/04/02 17:59:16 by mburgler         ###   ########.fr       */
+/*   Updated: 2024/04/03 16:26:51 by mburgler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	main() {
 		std::cout << "#ANIMAL NMB " << i << std::endl;
         animals[i]->makeSound();
 		Cat* catPtr = dynamic_cast<Cat*>(animals[i]);
-        if (catPtr != nullptr) { // Check if the cast was successful
+        if (catPtr != NULL) { // Check if the cast was successful
             catPtr->mind_boggeling("Catnip ...");
 			catPtr->think_aloud();
         }
